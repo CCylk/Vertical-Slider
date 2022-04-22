@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical-Slider</title>
+  <link rel="stylesheet" href="Vertical-Slider.css">
+  <script src="https://kit.fontawesome.com/fd9d1cad78.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="slider-box">
+    <div class="left-slide">
+        <div class="slide1">
+            <h1>The Lake District</h1>
+            <p>Adventure on a British break</p>
+            <button class="info1">More info</button> 
+            <h2 class="price-point1">Price point: Lower end</h2>
+        </div>
+        <div class="slide2">
+            <h1>Spain</h1>
+            <p>A warm & relaxing getaway</p>
+            <button class="info2">More info</button>
+            <h2 class="price-point2">Price point: Middle ground</h2>
+        </div>
+        <div class="slide3">
+            <h1>Maldives</h1>
+            <p>Luxury & Magnificence</p>
+            <button class="info3">More info</button>
+            <h2 class="price-point3">Price point: Higher end</h2>
+        </div>
+    </div>
+    <button class="generate">Choose for me!</button>
+    <div class="right-slide">
+        <div style="background: url(Maldives.jpg) no-repeat;"></div>
+        <div style="background: url(Spain.jpg) no-repeat;"></div>
+        <div style="background: url(Lake-District.jpg) no-repeat;"></div>
+    </div>
+    <div class="action-btn">
+        <button class="down-btn">
+            <i class="fa fa-arrow-down"></i>
+        </button>
+        <button class="up-btn">
+            <i class="fa fa-arrow-up"></i>
+        </button>
+    </div>
+</div>
+<div class="modal-container1">
+    <button class="wiki"><a href="https://en.wikipedia.org/wiki/Lake_District"><i class="fa-brands fa-wikipedia-w"></i></a></button>
+    <div class="modal1">
+        <h1>The Lake District</h1>
+        <p>The Lake District in Cumbria is one of the most popular holiday destinations in England. Come and climb the fells like Helvellyn and Skiddaw, savour the tranquility and beauty of Ullswater, or experience the many attractions of Windermere.</p>
+        <button class="infoclose1">Close</button>
+    </div>
+</div>
+<div class="modal-container2">
+    <button class="wiki"><a href="https://en.wikipedia.org/wiki/Spain"><i class="fa-brands fa-wikipedia-w"></i></a></button>
+    <div class="modal2">
+        <h1>Spain</h1>
+        <p>Whether you are looking to sunbathe on a beach or want to visit general tourist attractions Spain has you covered, accompanied by great weather and delicious food.</p>
+        <button class="infoclose2">Close</button>
+    </div>
+</div>
+<div class="modal-container3">
+    <button class="wiki"><a href="https://en.wikipedia.org/wiki/Maldives"><i class="fa-brands fa-wikipedia-w"></i></a></button>
+    <div class="modal3">
+        <h1>Maldives</h1>
+        <p>Known for it's clear emerald waters and beautiful beaches, you will definitely not struggle to relax and live your best life here.</p>
+        <button class="infoclose3">Close</button>
+    </div>
+</div>
+<script src="Vertical-Slider.js"></script>
+</body>
+</html>

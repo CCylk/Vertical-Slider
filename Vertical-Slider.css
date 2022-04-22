@@ -1,0 +1,429 @@
+
+* { 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body { 
+  font-family: 'Bebas Neue', cursive;
+  height: 100vh;
+}
+
+/* Vertical slider start */
+
+.slide1{
+  background-image: linear-gradient(to bottom, rgb(121, 103, 42) 40%, rgba(121, 102, 42, 0.7));
+}
+
+.slide2{
+  background-image: linear-gradient(to bottom, rgb(226, 162, 25) 40%, rgba(226, 162, 25, 0.7));
+}
+
+.slide3{
+  background-image: linear-gradient(to bottom, rgb(52, 152, 192) 40%, rgba(52, 152, 192, 0.7));
+}
+
+
+.slider-box{
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.left-slide{
+  height: 100vh;
+  width: 35%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.left-slide div{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+}
+
+.left-slide h1{
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-top: -30px;
+}
+
+.right-slide{
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 65%;
+  transition: 0.5s ease-in-out;
+}
+
+.right-slide div{
+  background-position: center !important;
+  background-size: cover !important;
+  height: 100%;
+  width: 100%;
+}
+
+.up-btn, .down-btn{
+  background-color: white;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 15px;
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  z-index: 100;
+}
+
+button:focus{
+  outline: 0;
+}
+
+.up-btn:hover {
+  background-color: rgba(240, 243, 236, 0.3);
+}
+
+.down-btn:hover {
+  background-color: rgba(240, 243, 236, 0.3);
+}
+
+.down-btn{
+  transform: translateX(-100%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.up-btn{
+  transform: translateY(-100%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* Vertical slider end */
+
+/* Random generator start */
+
+
+.generate{
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  left: 10px;
+  background-color: rgb(150, 44, 221);
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  padding: 15px 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+}
+
+.generate:hover{
+  background-color: rgb(172, 26, 147);
+}
+
+/* Random generator end */
+
+/* Modal start */
+
+.info1, .infoclose1, .info2, .infoclose2, .info3, .infoclose3{
+  background-color: rgb(150, 44, 221);
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+}
+
+.infoclose1 {
+  position: absolute;
+  left: 43%;
+}
+
+.infoclose2 {
+  position: absolute;
+  left: 43%;
+}
+
+.infoclose3 {
+  position: absolute;
+  left: 43%;
+}
+
+.info1:hover{
+  background-color: rgb(172, 26, 147);
+}
+
+.infoclose1:hover{
+  background-color: rgb(172, 26, 147);
+}
+
+.info2:hover{
+  background-color: rgb(172, 26, 147);
+}
+
+.infoclose2:hover{
+  background-color: rgb(172, 26, 147);
+}
+
+.info3:hover{
+  background-color: rgb(172, 26, 147);
+}
+
+.infoclose3:hover{
+  background-color: rgb(172, 26, 147);
+}
+
+
+.modal-container1, .modal-container2, .modal-container3{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  height: 50%;
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  border-radius: 5px;
+}
+
+.modal-container1.show, .modal-container2.show, .modal-container3.show{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal1, .modal2, .modal3{ 
+border-radius: 3px;
+height: 45%;
+width: 100%;
+text-align: center;
+color: white;
+}
+
+.modal1 h1, .modal2 h1, .modal3 h1{
+  font-size: 2.5rem;
+  height: 30%;
+  width: 96%;
+}
+
+.modal1 p, .modal2 p, .modal3 p{
+  font-size: 2rem;
+  opacity: 0.8;
+  text-align: start;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.wiki {
+  font-size: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 255, 0);
+  padding: 10px;
+  border: none;
+}
+
+.fa-wikipedia-w {
+  color: rgb(197, 194, 194);
+}
+
+.fa-wikipedia-w:hover {
+color: rgb(172, 26, 147);
+}
+/* Modal end */
+
+/* Price point text start */
+
+.price-point1 {
+  position: absolute;
+  bottom:0;
+  left:0;
+  margin: 25px 25px;
+  padding: 8px 8px;
+  background-color: rgba(51, 255, 0, 0.55);
+  border-radius: 5px;
+  box-shadow:  0 0 12px 5px rgba(51, 255, 0, 0.75);
+}
+
+.price-point2 {
+  position: absolute;
+  top: 114.5rem;
+  left: 0;
+  margin: 25px 25px;
+  padding: 8px 8px;
+  background-color: rgba(255, 72, 0, 0.65);
+  border-radius: 5px;
+  box-shadow:  0 0 12px 5px rgba(255, 72, 0, 0.75);
+}
+
+.price-point3 {
+  position: absolute;
+  top: 175rem;
+  left:0;
+  margin: 25px 25px;
+  padding: 8px 8px;
+  background-color: rgba(255, 0, 0, 0.70);
+  border-radius: 5px;
+  box-shadow:  0 0 12px 5px rgba(255, 0, 0, 0.75);
+}
+
+/* Price point text end */
+
+
+
+/* Media query start */
+
+/* Tablet*/
+
+@media screen and (max-width: 700px) {
+
+  .modal-container1, .modal-container2, .modal-container3{
+    top: 22%;
+    left: 45%;
+    height: 50%;
+    width: 50%;
+  }
+
+  .modal1 h1, .modal2 h1, .modal3 h1{
+    font-size: 1.5rem;
+    height: 20%;
+    width: 96%;
+  }
+  
+  .modal1 p, .modal2 p, .modal3 p{
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .infoclose1 {
+    left: 38%;
+  }
+
+  .infoclose2 {
+    left: 38%;
+  }
+
+  .infoclose3 {
+    left: 38%;
+  }
+
+  .price-point1 {
+    margin: 15px 15px;
+    padding: 10px 10px;
+    font-size: 20px;
+  }
+
+  .price-point2 {
+    margin: 15px 10px;
+    padding: 10px 10px;
+    font-size: 20px;
+    top: 99.5rem;
+  }
+
+  .price-point3 {
+    top: 151rem;
+    margin: 26px 10px;
+    padding: 8px 8px;
+    font-size: 20px;
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 480px) {
+  .left-slide div{
+    font-size: 15px;
+  }
+  
+  .left-slide h1{
+    font-size: 25px;
+  }
+
+  .info1, .infoclose1, .info2, .infoclose2, .info3, .infoclose3{
+    padding: 10px 15px;
+    margin-top: 15px;
+    font-size: 15px;
+  }
+
+  .up-btn, .down-btn{
+    font-size: 15px;
+    padding: 10px;
+  }
+  
+  .generate{
+    top: 15px;
+    left: 30px;
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+  
+  .modal-container1, .modal-container2, .modal-container3{
+    height: 40%;
+    top: 30%;
+  }
+
+  .modal-container2, .modal-container3{
+    height: 35%;
+  }
+
+  .modal1 h1, .modal2 h1, .modal3 h1{
+    font-size: 1.5rem;
+    height: 25%;
+    width: 96%;
+  }
+  
+  .modal1 p, .modal2 p, .modal3 p{
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .infoclose1 {
+    bottom: 5%;
+  }
+  
+  .price-point1 {
+    margin: 10px 10px;
+    padding: 5px 5px;
+    font-size: 15px;
+  }
+
+  .price-point2 {
+    top: 101rem;
+    margin: 10px 5px;
+    padding: 5px 8px;
+    font-size: 15px;
+  }
+
+  .price-point3 {
+    top: 153rem;
+    margin: 10px 8px;
+    padding: 5px 5px;
+    font-size: 15px;
+  }
+}
+
+/* Media query end */
